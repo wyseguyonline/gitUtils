@@ -12,11 +12,13 @@ if (($?)); then
   echo "failed to add"
   exit 0;
 fi
+
 git commit -m "EMERGENCY COMMIT - branch $current_branch @ $commit_time";
 if (($?)); then 
   echo "failed to commit"
   exit 0;
 fi
+
 git push origin $current_branch;
 if (($?)); then
   echo "failed to push"
